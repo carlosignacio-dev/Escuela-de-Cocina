@@ -1,0 +1,19 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.clases {
+    background-color: v.$gris;
+    padding: 5rem 0;
+
+    &__heading {
+        @include m.heading;
+    }
+    &__grid {
+        @include m.tablet { 
+            @include m.grid(2, 2rem)
+        }
+        @include m.desktop { 
+            @include m.grid(3, 2rem)
+        }
+    }
+}
